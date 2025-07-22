@@ -1,13 +1,13 @@
 switches_list:
   - name: ascii_mode
     reset: 0
-    states: [ 中, En ]
+    states: [ En, 中 ]
   - name: full_shape
     states: [ 半, 全 ]  # 符号
   - name: ascii_punct
     states: [ 。，, ．， ] # 中文标点，英文标点     
   - name: emoji
-    states: [ 💀, 😄 ]  
+    states: [ 😄, 💀 ]  
   - name: simplification
     states: [ 简, 繁 ] 
   - name: charset_filter                 #自定义字集
@@ -282,9 +282,9 @@ key_config:
   options_toggle:
     __append:
      # emoji开关
-      - { when: always, accept: "Shift+space", toggle: emoji, }
+     # - { when: always, accept: "Shift+space", toggle: emoji, }
      # 切换中英标点
-      - { when: always, accept: "Control+period", toggle: ascii_punct, }    
+     # - { when: always, accept: "Control+period", toggle: ascii_punct, }    
      # 切换简繁
       - { when: always, accept: "Control+Shift+4", toggle: simplification, } 
      # 切换简繁（Mac）
@@ -307,7 +307,7 @@ key_config:
   keys:
     __append:
      # 打字时，; 选中第2个候选字发送
-      - { accept: semicolon, send: 2, when: has_menu}  
+     # - { accept: semicolon, send: 2, when: has_menu}  
      # 打字时，' 选中第3个候选字发送 (音码方案需要此键 分词，形码单独启用)
   #    - { accept: apostrophe, send: 3, when: has_menu} 
      # 打字时，[ 选中第4个候选字发送
@@ -325,6 +325,18 @@ key_config:
       - { accept: minus, send: Page_Up, when: paging} 
      # 等于号向后翻页
       - { accept: equal, send: Page_Down, when: has_menu} 
+      #- { when: composing,  accept: semicolon,  send: ';'}
+      - { when: paging,    accept: comma,  send: Page_Up}     # 逗号, 返回上一页
+      - { when: has_menu,  accept: period, send: Page_Down}   # 句号. 下一页
+      - { when: composing, accept: Control+p, send: Up}
+      - { when: composing, accept: Control+n, send: Down}
+      - { when: composing, accept: Control+b, send: Left}
+      - { when: composing, accept: Control+f, send: Right}
+      - { when: composing, accept: Control+a, send: Home}
+      - { when: composing, accept: Control+e, send: End}
+      - { when: composing, accept: Control+h, send: BackSpace}
+      - { when: composing, accept: Control+i, send: Control+Left} 
+      - { when: composing, accept: Control+o, send: Control+Right}
 
      # 删除用户自造词
       - { when: composing, accept: "Control+k", send: Shift+Delete } 

@@ -137,7 +137,7 @@ key_binder:
       # 打字时，' 选中第3个候选字发送 (音码方案需要此键 分词，形码单独启用)
       - { accept: apostrophe, send: 3, when: has_menu} 
       # 简单鹤字根拆分显示开关
-      - { when: has_menu, accept: "Control+i", toggle: chaifen }         
+      - { when: has_menu, accept: "Control+g", toggle: chaifen }         
   bindings:
     __patch: 
       - :/key_binder/custom_bindings?
@@ -393,7 +393,7 @@ axu_code:
   # always:   总是展示(默认)
   # trigger:  输入激活码后激活辅码
   # none:     始终不展示辅码
-  show_aux_notice: "trigger"
+  show_aux_notice: "always"
 
 ##################################################
 chaifen:

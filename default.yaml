@@ -48,7 +48,11 @@ switcher:
   option_list_separator: '／'
 
 menu:
-  page_size: 5
+  page_size: 9
+
+style:
+  text_orientation: horizontal      # 候选文字横向(horizontal)/纵向(vertical)
+  candidate_list_layout: linear     # 候选菜单横向(linear)/纵向(stacked)
 
 punctuator:
   full_shape:
@@ -88,7 +92,7 @@ ascii_composer:
   switch_key:
     Caps_Lock: clear      # commit_code | commit_text | clear
     Eisu_toggle: clear      # commit_code | commit_text | clear
-    Shift_L: inline_ascii  # commit_code | commit_text | inline_ascii | clear | noop
+    Shift_L: commit_code  # commit_code | commit_text | inline_ascii | clear | noop
     Shift_R: noop         # commit_code | commit_text | inline_ascii | clear | noop
     Control_L: noop       # commit_code | commit_text | inline_ascii | clear | noop
     Control_R: noop       # commit_code | commit_text | inline_ascii | clear | noop  

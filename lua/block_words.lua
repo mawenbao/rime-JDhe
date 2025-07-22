@@ -28,22 +28,22 @@ local function filter(input, env)
   local ctx        = env.engine.context
   local block_on   = ctx:get_option("block_words_enabled")
   local composing  = ctx.input
-  local is_four_cs = composing and (#composing == 4)
-
+  --local is_four_cs = composing and (#composing == 4)
+  --
   -- ---------------- 四码逻辑 -------------------
-  if is_four_cs then
-    local first_text = cands[1].text
-    if is_cjk_hanzi(first_text) then
-      -- 插入 "①"，并允许显示
-      local first = cands[1]
-      local one = Candidate("symbol", first.start, first._end, "①", "")
-      blocked_words["①"] = false
-      table.insert(cands, 1, one)
-    else
-      -- 首选不是汉字 ⇒ 屏蔽 "①"
-      blocked_words["①"] = true
-    end
-  end
+  --if is_four_cs then
+  --  local first_text = cands[1].text
+  --  if is_cjk_hanzi(first_text) then
+  --    -- 插入 "①"，并允许显示
+  --    local first = cands[1]
+  --    local one = Candidate("symbol", first.start, first._end, "①", "")
+  --    blocked_words["①"] = false
+  --    table.insert(cands, 1, one)
+  --  else
+  --    -- 首选不是汉字 ⇒ 屏蔽 "①"
+  --    blocked_words["①"] = true
+  --  end
+  --end
   -- ---------------------------------------------
 
   -- 输出候选，遵循：首选必出 + 屏蔽表 + 开关控制

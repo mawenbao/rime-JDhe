@@ -19,28 +19,28 @@ import_tables:
   - cn_dicts/my_user          # 用户词组与虎码通用
   # ---------------------------------------
     # 细胞词库
-#  - cn_dicts_cell/medication                             # 医药相关
+  #- cn_dicts_cell/medication                             # 医药相关
   - cn_dicts_cell/industry_product                    # 行业产品
   - cn_dicts_cell/exthot                                     # ext 网络热词
-#  - cn_dicts_cell/chess                                       # 象棋
-#  - cn_dicts_cell/chess2                                     # 象棋棋谱等
+  #- cn_dicts_cell/chess                                       # 象棋
+  #- cn_dicts_cell/chess2                                     # 象棋棋谱等
   - cn_dicts_cell/animal                                     # 动物
-#  - cn_dicts_cell/game                                      # 游戏相关
+  #- cn_dicts_cell/game                                      # 游戏相关
   - cn_dicts_cell/idiom                                     # 成语
-#  - cn_dicts_cell/sport                                      # 运动相关 各种球类运动术语、明星
-#  - cn_dicts_cell/media                                    # 自媒体
+  #- cn_dicts_cell/sport                                      # 运动相关 各种球类运动术语、明星
+  #- cn_dicts_cell/media                                    # 自媒体
   - cn_dicts_cell/shulihua                                # 数理化
-#  - cn_dicts_cell/food                                      # 食物 菜名
-#  - cn_dicts_cell/inputmethod                         # 输入法相关
-#  - cn_dicts_cell/history                                  # 历史相关
+  #- cn_dicts_cell/food                                      # 食物 菜名
+  #- cn_dicts_cell/inputmethod                         # 输入法相关
+  #- cn_dicts_cell/history                                  # 历史相关
   - cn_dicts_cell/place                                     # 地名 地铁
-#  - cn_dicts_cell/geography                           # 地理 地质
-#  - cn_dicts_cell/name2                                 # 动漫人名等  需要降频
-#  - cn_dicts_cell/literature                             # 语文 文学 生僻词汇
-#  - cn_dicts_cell/music                                  # 音乐相关
-#  - cn_dicts_cell/computer                           # 计算机 互联网相关
+  #- cn_dicts_cell/geography                           # 地理 地质
+  #- cn_dicts_cell/name2                                 # 动漫人名等  需要降频
+  #- cn_dicts_cell/literature                             # 语文 文学 生僻词汇
+  #- cn_dicts_cell/music                                  # 音乐相关
+  #- cn_dicts_cell/computer                           # 计算机 互联网相关
   - cn_dicts_cell/composite                         # 复合词 合成词
-#  - cn_dicts_cell/name                                 # 名字 要降频
+  #- cn_dicts_cell/name                                 # 名字 要降频
   # ---------------------------------------  
 ...
 

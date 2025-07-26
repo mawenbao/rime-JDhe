@@ -7,7 +7,8 @@ switches_list:
   - name: ascii_punct
     states: [ 。，, ．， ] # 中文标点，英文标点     
   - name: emoji
-    states: [ 😄, 💀 ]  
+    states: [ 🤭, 😄 ]
+    reset: 1
   - name: simplification
     states: [ 简, 繁 ] 
   - name: charset_filter                 #自定义字集

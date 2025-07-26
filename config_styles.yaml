@@ -33,8 +33,8 @@ patch:
   #style/label_format: "\u2005\u2006%s"                       # 标签字符：例如 %s. 效果为 1. 2. 3. .... ，\u2005\u2006%s 效果为留空
   style/label_format: "%s"                       # 标签字符：例如 %s. 效果为 1. 2. 3. .... ，\u2005\u2006%s 效果为留空
   style/enhanced_position: true
-#  style/layout/linespacing: 0                         # 字号百分比，参考 <https://github.com/rime/weasel/pull/1177>
-#  style/layout/baseline: 0                            # 字号百分比，与 linespacing 一同设置可解决字体跳动问题，设置为 0 为禁用
+  style/layout/linespacing: 128                         # 字号百分比，参考 <https://github.com/rime/weasel/pull/1177>
+  style/layout/baseline: 100                            # 字号百分比，与 linespacing 一同设置可解决字体跳动问题，设置为 0 为禁用
 
 
   # 字体大小设置

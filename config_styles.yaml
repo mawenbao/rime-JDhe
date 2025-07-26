@@ -76,16 +76,18 @@ layout settings:  #仿微信
   style/layout/min_height: 0                          # 候选框最小高度
   style/layout/min_width: 145                          # 候选框最小宽度
   style/layout/border_width: 0                        # 边框宽度；又名 border
-  style/layout/margin_x: 5                            # 主体元素和候选框的左右边距；为负值时，不显示候选框
+  style/layout/margin_x: 8                            # 主体元素和候选框的左右边距；为负值时，不显示候选框
   style/layout/margin_y: 5                            # 主体元素的上下边距；为负值时，不显示候选框
   style/layout/spacing: 8                             # inline_preedit 为否时，编码区域和候选区域的间距
   style/layout/round_corner: 8
-  style/layout/candidate_spacing: 10                  # 候选项之间的间距
+  style/layout/candidate_spacing: 8                  # 候选项之间的间距
   style/layout/hilite_spacing: 5                      # 候选项和相应标签的间距
   style/layout/hilite_padding: 5                      # 选中区域和内部文字的间距，影响选中区域大小
+  style/layout/hilite_padding_x: 8                  # 高亮区域和内部文字的左右间距，如无特殊指定则依 hilite_padding 设置
+  #style/layout/hilite_padding_y: 8                  # 高亮区域和内部文字的上下间距，如无特殊指定则依 hilite_padding 设置
   style/layout/corner_radius: 8                       # 候选窗口圆角半径
   #style/layout/shadow_radius: 0                       # 阴影区域半径，为 0 不显示阴影；需要同时在配色方案中指定非透明的阴影颜色
-  #style/layout/shadow_offset_x: 8                     # 阴影左右偏移距离
+  #style/layout/shadow_offset_x: 5                     # 阴影左右偏移距离
   #style/layout/shadow_offset_y: 4                     # 阴影上下偏移距离
 
 layout settings2:  #无圆角

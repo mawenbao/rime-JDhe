@@ -1,2 +1,6 @@
 
 sync.ffs_db
+/build
+/*.userdb/
+/installation.yaml
+/user.yaml

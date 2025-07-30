@@ -1,5 +1,8 @@
 patch:
   switcher/+:
+    caption: "ã€”æ–¹æ¡ˆé€‰å•ã€•"
+    hotkeys:
+      - Control+grave
     save_options:
     - ascii_punct
     - ascii_mode
@@ -7,14 +10,14 @@ patch:
     - emoji
     - full_shape
     - charset_filter
-    - simplification              # ¼ò·±ÇĞ»»
-    - pinyinhint                          # Æ´ÒôÂË¾µ¿ª¹Ø
-    - single_char_only         # µ¥×ÖÄ£Ê½
-    - single_char_only_for_full_code        # ËÄÂëµ¥×Ö¿ª¹Ø
-    - chaifen        # ¼òµ¥º×²ğ×Ö×¢ÊÍ¿ª¹Ø
-    - inflexible    # ¹Ì´Ê»ò¶¯´Ê¿ª¹Ø
-    - block_words_enabled   # ÊÇ·ñÆÁ±ÎÖ¸¶¨µÄ×Ö´ÊÁĞ±í
-    - prediction                 #ÊäÈëÁªÏëÔ¤²â
+    - simplification              # ç®€ç¹åˆ‡æ¢
+    - pinyinhint                          # æ‹¼éŸ³æ»¤é•œå¼€å…³
+    - single_char_only         # å•å­—æ¨¡å¼
+    - single_char_only_for_full_code        # å››ç å•å­—å¼€å…³
+    - chaifen        # ç®€å•é¹¤æ‹†å­—æ³¨é‡Šå¼€å…³
+    - inflexible    # å›ºè¯æˆ–åŠ¨è¯å¼€å…³
+    - block_words_enabled   # æ˜¯å¦å±è”½æŒ‡å®šçš„å­—è¯åˆ—è¡¨
+    - prediction                 #è¾“å…¥è”æƒ³é¢„æµ‹
 
   schema_list:
     - schema: double_pinyin_flypy
@@ -25,13 +28,13 @@ patch:
   key_binder/+:
     __include: keys.custom:/keys_config
 
-  # ÇĞ»»ÖĞÓ¢£º
-  # ²»Í¬µÄÑ¡Ïî±íÊ¾£º´ò×Ö´òµ½Ò»°ëÊ±°´ÏÂÁË CapsLock¡¢Shift¡¢Control ºó£º
-  # commit_code  ÉÏÆÁÔ­Ê¼µÄ±àÂë£¬È»ºóÇĞ»»µ½Ó¢ÎÄ
-  # commit_text  ÉÏÆÁÆ´³öµÄ´Ê¾ä£¬È»ºóÇĞ»»µ½Ó¢ÎÄ
-  # clear        Çå³ıÎ´ÉÏÆÁÄÚÈİ£¬È»ºóÇĞ»»µ½Ó¢ÎÄ
-  # inline_ascii ÇĞ»»µ½ÁÙÊ±Ó¢ÎÄÄ£Ê½£¬°´»Ø³µÉÏÆÁºó»Øµ½ÖĞÎÄ×´Ì¬
-  # noop         ÆÁ±Î¿ì½İ¼ü£¬²»ÇĞ»»ÖĞÓ¢£¬µ«²»ÒªÆÁ±Î CapsLock
+  # åˆ‡æ¢ä¸­è‹±ï¼š
+  # ä¸åŒçš„é€‰é¡¹è¡¨ç¤ºï¼šæ‰“å­—æ‰“åˆ°ä¸€åŠæ—¶æŒ‰ä¸‹äº† CapsLockã€Shiftã€Control åï¼š
+  # commit_code  ä¸Šå±åŸå§‹çš„ç¼–ç ï¼Œç„¶ååˆ‡æ¢åˆ°è‹±æ–‡
+  # commit_text  ä¸Šå±æ‹¼å‡ºçš„è¯å¥ï¼Œç„¶ååˆ‡æ¢åˆ°è‹±æ–‡
+  # clear        æ¸…é™¤æœªä¸Šå±å†…å®¹ï¼Œç„¶ååˆ‡æ¢åˆ°è‹±æ–‡
+  # inline_ascii åˆ‡æ¢åˆ°ä¸´æ—¶è‹±æ–‡æ¨¡å¼ï¼ŒæŒ‰å›è½¦ä¸Šå±åå›åˆ°ä¸­æ–‡çŠ¶æ€
+  # noop         å±è”½å¿«æ·é”®ï¼Œä¸åˆ‡æ¢ä¸­è‹±ï¼Œä½†ä¸è¦å±è”½ CapsLock
   ascii_composer:
     good_old_caps_lock: true  # true | false
     switch_key:

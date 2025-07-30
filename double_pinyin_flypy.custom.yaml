@@ -22,7 +22,7 @@ patch:
       # 當固詞模式啓動後，輸入 4 碼時會優先輸出碼表中的二字詞，這些輸出帶有「⚡️」標記。
     - name: charset_filter               # 自定义字集
       states: [ 全集, 常用 ]
-      reset: 1
+      reset: 0
     - name: prediction                   # 输入候选预测
       states: [ 关闭预测, 开启预测 ]
     - name: pinyinhint                   # 拼音滤镜
@@ -84,6 +84,11 @@ patch:
     - derive|^(.*?);.*?,.*?,.*?,(\w)(\w).*$|$1/$3$4| # 双拼+2位辅助码的情况
     - erase/^(.+);(.+)$/    # 删除原始编码加速检索
 
+  translator/+:
+    preedit_format: 
+      - xform/([a-z][a-z][a-z][a-z])o/$1°/
+      - xform/(?<=[A-Z])\s(?=[A-Z])//  # 消除大写字母之间的空格
+
   key_binder/+:
     __include: keys.custom:/keys_config
 
@@ -92,7 +97,10 @@ patch:
       __include: symbols.custom:/symbols
     full_shape/+:
     half_shape/+:
-  
+      ';' : [ '；', ';' ]
+      '''' : { pair: [ '‘', '’' ] }
+      '"' : { pair: [ '“', '”' ] }
+
   # 取消简单鹤前置候选^
   fixed:
     dictionary: ""
